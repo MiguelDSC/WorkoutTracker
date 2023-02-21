@@ -1,12 +1,11 @@
 import React from "react";
 
-function GreatHeader() {
+function GreetHeader() {
   return (
     <div style={{ display: "flex" }}>
       <div>
-        <h1>Hi Miguel!</h1>{" "}
+        <h1>Hi Miguel!</h1>
         <div>
-          {" "}
           <h2>Choose Workout</h2>
         </div>
       </div>
@@ -14,4 +13,4 @@ function GreatHeader() {
   );
 }
 
-export default GreatHeader;
+export default GreetHeader;

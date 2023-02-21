@@ -1,5 +1,5 @@
 import "./App.css";
-import GreatHeader from "./components/GreetHeader/GreatHeader";
+import GreetHeader from "./components/GreetHeader/GreetHeader";
 import WorkoutType from "./components/WorkoutType/WorkoutType";
 
 export enum WorkoutEnum {
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       {/* greet user */}
-      <GreatHeader />
+      <GreetHeader />
 
       {/* 3 workout types */}
       <WorkoutType type={WorkoutEnum.UPPER_CHEST} />

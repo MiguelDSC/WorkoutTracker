@@ -7,4 +7,16 @@
   background-color: lightblue;
   margin: auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  width: 50px;
+}
+
+.cardBox {
+  margin: auto;
+  width: 80%;
+  height: 50%;
 }

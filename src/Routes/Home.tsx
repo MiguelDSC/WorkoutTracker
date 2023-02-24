@@ -2,6 +2,9 @@ import { WorkoutEnum } from "../App";
 import GreetHeader from "../components/GreetHeader/GreetHeader";
 import WorkoutType from "../components/WorkoutType/WorkoutType";
 import styles from "./home.module.css";
+import chest from "./icons/chest.png";
+import pull from "./icons/pull.png";
+import squat from "./icons/squat.png";
 
 function Home() {
   return (
@@ -12,9 +15,9 @@ function Home() {
       {/* 3 workout types */}
 
       <div className={styles.workoutTypeSelector}>
-        <WorkoutType type={WorkoutEnum.UPPER_CHEST} />
-        <WorkoutType type={WorkoutEnum.UPPER_BACK} />
-        <WorkoutType type={WorkoutEnum.LEGS} />
+        <WorkoutType type={WorkoutEnum.UPPER_CHEST} icon={chest} />
+        <WorkoutType type={WorkoutEnum.UPPER_BACK} icon={pull} />
+        <WorkoutType type={WorkoutEnum.LEGS} icon={squat} />
       </div>
     </div>
   );

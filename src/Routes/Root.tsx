@@ -1,3 +1,5 @@
+import { Outlet } from "react-router";
+import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 
 function Root() {
@@ -12,15 +14,19 @@ function Root() {
           <span></span>
 
           <ul id={styles.menu}>
-            <a href="#">
-              <li>Workout Select</li>
-            </a>
-            <a href="#">
-              <li>Logout</li>
-            </a>
+            <li>
+              <Link to={`home`}>Workout Select</Link>
+            </li>
+
+            <li>
+              <Link to={`logout`}>Logout</Link>
+            </li>
           </ul>
         </div>
       </nav>
+      <div className={styles.container}>
+        <Outlet />
+      </div>
     </>
   );
 }

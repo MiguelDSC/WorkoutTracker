@@ -1,0 +1,11 @@
+.lines {
+  background-color: black;
+  width: 300px;
+  height: 3px;
+  display: block;
+}
+
+#lowerLine {
+  margin-top: 10px;
+  width: 280px;
+}

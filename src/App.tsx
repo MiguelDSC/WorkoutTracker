@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./Routes/Home";
+import Navbar from "./Routes/Navbar";
 
 export enum WorkoutEnum {
   UPPER_CHEST = "UPPER_CHEST",
@@ -10,7 +13,14 @@ export enum WorkoutEnum {
 function App() {
   const [selectedType, setSelectedType] = useState<WorkoutEnum>();
 
-  return <div className="App">{/* greet user */}</div>;
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

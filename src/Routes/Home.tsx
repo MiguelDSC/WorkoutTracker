@@ -2,9 +2,9 @@ import { WorkoutEnum } from "../App";
 import GreetHeader from "../components/GreetHeader/GreetHeader";
 import WorkoutType from "../components/WorkoutType/WorkoutType";
 import styles from "./home.module.css";
-import chest from "./icons/chest.png";
-import pull from "./icons/pull.png";
-import squat from "./icons/squat.png";
+import chest from "../assets/icons/chest.png";
+import pull from "../assets/icons/pull.png";
+import squat from "../assets/icons/squat.png";
 
 function Home() {
   return (

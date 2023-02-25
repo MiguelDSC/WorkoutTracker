@@ -1,0 +1,22 @@
+table {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr,
+td,
+th {
+  text-align: center;
+  border: 1px solid black;
+
+  white-space: nowrap;
+}
+
+th {
+  width: 10% !important;
+}
+
+input {
+  width: 20px;
+}

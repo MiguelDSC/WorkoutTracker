@@ -3,6 +3,7 @@ import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Routes/Home";
 import Navbar from "./Routes/Navbar";
+import WorkoutPage from "./Routes/WorkoutPage";
 
 export enum WorkoutEnum {
   UPPER_CHEST = "UPPER_CHEST",
@@ -18,6 +19,18 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route
+          path="/workout/upper-chest"
+          element={<WorkoutPage type={WorkoutEnum.UPPER_CHEST} />}
+        />
+        <Route
+          path="/workout/upper-back"
+          element={<WorkoutPage type={WorkoutEnum.UPPER_CHEST} />}
+        />
+        <Route
+          path="/workout/legs"
+          element={<WorkoutPage type={WorkoutEnum.UPPER_CHEST} />}
+        />
       </Routes>
     </>
   );

@@ -2,25 +2,6 @@ import { Link } from "react-router-dom";
 import { WorkoutEnum } from "../App";
 import WorkoutItem from "../components/WorkoutItem/WorkoutItem";
 
-// const upperChest = {
-//   excersize_1: {
-//     id: 1,
-//     name: "incline press",
-//     setList: {
-//       id: 1,
-//       sets: [
-//         {
-//           id: 1,
-//           previous: "7kg x 10",
-//           kg: "",
-//           reps: "",
-//           save: "",
-//         },
-//       ],
-//     },
-//   },
-// };
-
 type WorkoutPageProps = {
   type: WorkoutEnum;
 };
@@ -55,47 +36,33 @@ const legs = [
 
 function WorkoutPage(props: WorkoutPageProps) {
   let content;
+  let selectedWorkout;
 
-  if (props.type == WorkoutEnum.UPPER_CHEST) {
-    console.log("hier");
+  switch (props.type) {
+    case WorkoutEnum.UPPER_CHEST:
+      selectedWorkout = upper_chest;
+      break;
 
-    <>
-      {
-        (content = upper_chest.map((item, index) => {
-          return (
-            <div key={index}>
-              <WorkoutItem name={item} />
-            </div>
-          );
-        }))
-      }
-    </>;
+    case WorkoutEnum.UPPER_BACK:
+      selectedWorkout = upper_back;
+      break;
+
+    case WorkoutEnum.LEGS:
+      selectedWorkout = legs;
+      break;
+
+    default:
+      break;
   }
-  if (props.type == WorkoutEnum.UPPER_BACK) {
-    <>
-      {
-        (content = upper_back.map((item, index) => {
-          return (
-            <div key={index}>
-              <WorkoutItem name={item} />;
-            </div>
-          );
-        }))
-      }
-    </>;
-  }
-  if (props.type == WorkoutEnum.LEGS) {
-    <>
-      {
-        (content = legs.map((item, index) => {
-          return (
-            <div key={index}>
-              <WorkoutItem name={item} />
-            </div>
-          );
-        }))
-      }
-    </>;
+
+  {
+    content = selectedWorkout?.map((item, index) => {
+      return (
+        <div key={index}>
+          <WorkoutItem name={item} />
+        </div>
+      );
+    });
   }
 
   return (

@@ -36,7 +36,11 @@ function WorkoutPage(props: WorkoutPageProps) {
     content = selectedWorkout?.map((item) => {
       return (
         <div key={item.id}>
-          <WorkoutItem id={item.id} name={item.name} />
+          <WorkoutItem
+            selectedWorkoutType={props.type}
+            workoutId={item.id}
+            name={item.name}
+          />
         </div>
       );
     });

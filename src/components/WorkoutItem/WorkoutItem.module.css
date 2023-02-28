@@ -30,17 +30,12 @@ input {
   color: #8e8e8e;
 }
 
-.savebutton {
+.saveButton {
   border: none;
   border-radius: 3px;
   background-color: #e9eaea;
   width: 22px;
   height: 20px;
-}
-
-/* Checkbox elements */
-.input[type="checkbox"]:checked {
-  background-color: green;
 }
 
 .title {

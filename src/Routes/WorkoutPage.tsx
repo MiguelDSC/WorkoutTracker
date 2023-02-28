@@ -1,38 +1,15 @@
 import { Link } from "react-router-dom";
 import { WorkoutEnum } from "../App";
 import WorkoutItem from "../components/WorkoutItem/WorkoutItem";
+import {
+  upper_chest,
+  upper_back,
+  legs,
+} from "../components/WorkoutItem/Workouts";
 
 type WorkoutPageProps = {
   type: WorkoutEnum;
 };
-
-const upper_chest = [
-  "Incline press",
-  "Lat Pulls",
-  "OHP",
-  "Rows",
-  "Side Raises",
-  "Curls",
-  "Tricep Extentions",
-];
-
-const upper_back = [
-  "Lat Pulls",
-  "Incline Press",
-  "Rows",
-  "Machine Chest Press",
-  "Side Raises",
-  "Hammer Curls",
-  "Tricep Extentions",
-];
-
-const legs = [
-  "Squat",
-  "Leg Press",
-  "Leg Extentions",
-  "Leg Curls",
-  "Calf Raises",
-];
 
 function WorkoutPage(props: WorkoutPageProps) {
   let content;
@@ -56,10 +33,10 @@ function WorkoutPage(props: WorkoutPageProps) {
   }
 
   {
-    content = selectedWorkout?.map((item, index) => {
+    content = selectedWorkout?.map((item) => {
       return (
-        <div key={index}>
-          <WorkoutItem name={item} />
+        <div key={item.id}>
+          <WorkoutItem id={item.id} name={item.name} />
         </div>
       );
     });

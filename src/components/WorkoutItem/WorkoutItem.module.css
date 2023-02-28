@@ -8,7 +8,7 @@ tr,
 td,
 th {
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   white-space: nowrap;
 }
@@ -19,4 +19,30 @@ th {
 
 input {
   width: 20px;
+}
+
+.input {
+  border: none;
+  border-radius: 3px;
+  background-color: #e9eaea;
+  width: 40px;
+  height: 20px;
+  color: #8e8e8e;
+}
+
+.savebutton {
+  border: none;
+  border-radius: 3px;
+  background-color: #e9eaea;
+  width: 22px;
+  height: 20px;
+}
+
+/* Checkbox elements */
+.input[type="checkbox"]:checked {
+  background-color: green;
+}
+
+.title {
+  color: #38adff;
 }

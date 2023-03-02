@@ -1,5 +1,5 @@
 import React from "react";
-import { WorkoutEnum } from "../../App";
+import { WorkoutEnum } from "../../SetService/Setservice";
 import styles from "./workoutType.module.css";
 
 type WorkoutTypeProps = {

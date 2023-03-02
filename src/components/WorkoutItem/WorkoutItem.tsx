@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { WorkoutEnum } from "../../App";
+import { WorkoutEnum } from "../../SetService/Setservice";
 import SetList from "../SetList/SetList";
 import styles from "./WorkoutItem.module.css";
 

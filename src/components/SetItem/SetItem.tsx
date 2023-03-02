@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { WorkoutEnum } from "../../App";
 import styles from "../WorkoutItem/WorkoutItem.module.css";
 
-type SetInterface = {
-  selectedWorkoutType: WorkoutEnum;
+export type SetInterface = {
+  WorkoutType: WorkoutEnum;
   workoutId: number;
   setId: number;
   kg: number;
@@ -14,12 +14,12 @@ type SetItemProps = {
   selectedWorkoutType: WorkoutEnum;
   workoutId: number;
   setId: number;
-  previous?: number;
+  previous?: string;
 };
 
 function SetItem(props: SetItemProps) {
   const [data, setData] = useState<SetInterface>({
-    selectedWorkoutType: props.selectedWorkoutType,
+    WorkoutType: props.selectedWorkoutType,
     workoutId: props.workoutId,
     setId: props.setId,
     kg: 0,

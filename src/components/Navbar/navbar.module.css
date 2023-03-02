@@ -144,3 +144,10 @@ a:hover {
     transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 }
+
+.icon {
+  width: 45px;
+  filter: brightness(0) invert(1);
+  margin-left: 10px;
+  margin-top: 10px;
+}

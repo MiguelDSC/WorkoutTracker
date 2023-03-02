@@ -1,4 +1,3 @@
-import { WorkoutEnum } from "../App";
 import GreetHeader from "../components/GreetHeader/GreetHeader";
 import WorkoutType from "../components/WorkoutType/WorkoutType";
 import styles from "./homePage.module.css";
@@ -6,6 +5,7 @@ import chest from "../assets/icons/chest.png";
 import pull from "../assets/icons/pull.png";
 import squat from "../assets/icons/squat.png";
 import { Link } from "react-router-dom";
+import { WorkoutEnum } from "../SetService/Setservice";
 
 function Home() {
   return (

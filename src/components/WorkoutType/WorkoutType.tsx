@@ -11,7 +11,7 @@ function WorkoutType(props: WorkoutTypeProps) {
   return (
     <div className={styles.card}>
       <div className={styles.cardBox}>
-        <img className={styles.icons} src={props.icon} alt="" />
+        <img className={styles.icons} src={props.icon} />
         <p className={styles.title}>{props.type}</p>
       </div>
     </div>

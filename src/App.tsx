@@ -1,19 +1,11 @@
-import { useState } from "react";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Routes/HomePage";
-import Navbar from "./Routes/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import WorkoutPage from "./Routes/WorkoutPage";
-
-export enum WorkoutEnum {
-  UPPER_CHEST = "UPPER_CHEST",
-  UPPER_BACK = "UPPER_BACK",
-  LEGS = "LEGS",
-}
+import { WorkoutEnum } from "./SetService/Setservice";
 
 function App() {
-  const [selectedType, setSelectedType] = useState<WorkoutEnum>();
-
   return (
     <>
       <Navbar />

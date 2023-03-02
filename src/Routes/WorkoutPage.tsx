@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { WorkoutEnum } from "../App";
 import WorkoutItem from "../components/WorkoutItem/WorkoutItem";
 import {
   upper_chest,
   upper_back,
   legs,
 } from "../components/WorkoutItem/Workouts";
+import { WorkoutEnum } from "../SetService/Setservice";
 
 type WorkoutPageProps = {
   type: WorkoutEnum;
@@ -47,13 +47,13 @@ function WorkoutPage(props: WorkoutPageProps) {
   }
 
   return (
-    <>
+    <div style={{ padding: "5px" }}>
       <Link to="/">
         <h1>return</h1>
       </Link>
 
-      <div>{content}</div>
-    </>
+      <>{content}</>
+    </div>
   );
 }
 
